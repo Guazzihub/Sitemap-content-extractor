@@ -10,13 +10,13 @@ def extract_urls_from_sitemap(sitemap_url):
     urls = [element[0].text for element in tree if element.tag.endswith('url')]
     return urls
 
-# Function to extract text content from a web page
+# Function to extract text content from a web page, excluding <nav> and <footer>
 def extract_text_from_page(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
-    # Remove scripts and styles
-    for script in soup(['script', 'style']):
-        script.decompose()
+    # Remove scripts, styles, <nav>, and <footer>
+    for tag in soup(['script', 'style', 'nav', 'footer']):
+        tag.decompose()
     # Extract text
     text = soup.get_text(separator='\n')
     # Clean up extra whitespace

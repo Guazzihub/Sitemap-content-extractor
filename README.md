@@ -1,53 +1,53 @@
-# Sitemap Content Extractor
+# Extrator de Conteúdo de Sitemap
 
-This Python script extracts text content from web pages listed in an XML sitemap and generates a Word document (`.docx`) with the extracted content. It uses `requests`, `BeautifulSoup`, and `python-docx` for web scraping and document creation.
+Este script em Python extrai o conteúdo textual de páginas listadas em um sitemap XML e gera um documento do Word (`.docx`) com o conteúdo extraído. Ele utiliza `requests`, `BeautifulSoup` e `python-docx` para raspagem de dados e criação de documentos.
 
-## Features
+## Funcionalidades
 
-- Parses an XML sitemap to extract URLs.
-- Scrapes text content from each webpage.
-- Removes unnecessary elements like scripts and styles.
-- Generates a clean and structured Word document with headings for each URL.
+- Faz o parsing de um sitemap XML para extrair URLs.
+- Realiza a raspagem de conteúdo textual de cada página.
+- Remove elementos desnecessários como `<script>` e `<style>`.
+- Gera um documento Word limpo e estruturado com títulos para cada URL.
 
-## Requirements
+## Requisitos
 
-You can install all dependencies using the following command:
+Você pode instalar todas as dependências com o seguinte comando:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## How to Use
+## Como Usar
 
-1. Clone the repository or download the script.
-2. Install the required dependencies using the command mentioned earlier.
-3. Update the `sitemap_url` variable in the script to point to the desired sitemap XML URL.
-4. Run the script:
+1. Clone este repositório ou baixe o script.
+2. Instale as dependências necessárias utilizando o comando acima.
+3. Atualize a variável sitemap_url no script com a URL do sitemap desejado.
+4. Execute o script:
 
    ```bash
    python app.py
    ```
 
-## File Structure
+## Estrutura de Arquivos
 
 ```
 .
-├── app.py          # The main Python script
-├── requirements.txt        # Dependencies
-└── site_content.docx       # Output Word document
+├── app.py                  # Script principal em Python
+├── requirements.txt        # Lista de dependências
+└── site_content.docx       # Documento Word gerado com o conteúdo extraído
 ```
 
-## Example
+## Exemplo
 
-To use the script with the sitemap URL `http://example.com/sitemap.xml`, update the following line in the script:
+Para utilizar o script com o sitemap http://example.com/sitemap.xml, atualize a seguinte linha no código:
 
 ```python
 sitemap_url = 'http://example.com/sitemap.xml'
 ```
 
-After running the script, the extracted content will be saved in `site_content.docx`.
+Após executar o script, o conteúdo extraído será salvo no arquivo  `site_content.docx`.
 
-## Notes
+## Observações
 
-- Ensure the sitemap XML is accessible and follows the standard format.
-- Large websites with extensive sitemaps may take longer to process.
+- Certifique-se de que o sitemap XML esteja acessível e siga o formato padrão.
+- Sitemaps muito grandes podem levar mais tempo para serem processados.

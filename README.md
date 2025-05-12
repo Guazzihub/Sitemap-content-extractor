@@ -1,3 +1,5 @@
+## [Clique aqui para ver a versão em Português](https://github.com/Guazzihub/Sitemap-content-extractor/tree/Portugu%C3%AAs)
+
 # Sitemap Content Extractor
 
 This Python script extracts text content from web pages listed in an XML sitemap and generates a Word document (`.docx`) with the extracted content. It uses `requests`, `BeautifulSoup`, and `python-docx` for web scraping and document creation.
@@ -32,7 +34,7 @@ pip install -r requirements.txt
 
 ```
 .
-├── app.py          # The main Python script
+├── app.py                  # Main script
 ├── requirements.txt        # Dependencies
 └── site_content.docx       # Output Word document
 ```
